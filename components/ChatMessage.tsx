@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { Message } from '../types';
 
 interface ChatMessageProps {
@@ -11,7 +12,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
 
   return (
     <div className={`flex w-full mb-6 ${isUser ? 'justify-end' : 'justify-start'}`}>
-      <div className={`flex flex-col max-w-[85%] md:max-w-[70%] ${isUser ? 'items-end' : 'items-start'}`}>
+      <div className={`flex flex-col max-w-[90%] md:max-w-[80%] lg:max-w-[70%] ${isUser ? 'items-end' : 'items-start'}`}>
         
         {/* Avatar / Name (Optional) */}
         <span className="text-xs text-slate-400 mb-1 px-1">
@@ -27,7 +28,9 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
           }`}
         >
           <div className="markdown-content">
-            <ReactMarkdown>{message.text}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {message.text}
+            </ReactMarkdown>
           </div>
         </div>
 

@@ -35,10 +35,19 @@
       .markdown-content pre code { background-color: transparent; padding: 0; }
       .markdown-content blockquote { border-left: 4px solid #cbd5e1; padding-left: 1em; color: #64748b; margin-bottom: 0.75em; }
       
+      /* Table Styles */
+      .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1em; font-size: 0.95em; }
+      .markdown-content th, .markdown-content td { border: 1px solid #cbd5e1; padding: 0.5em 0.75em; text-align: left; }
+      .markdown-content th { background-color: #f1f5f9; font-weight: 600; color: #334155; }
+      .markdown-content tr:nth-child(even) { background-color: #f8fafc; }
+      
       /* User message overrides */
       .user-message .markdown-content a { color: #bfdbfe; }
       .user-message .markdown-content code { background-color: rgba(255,255,255,0.2); }
       .user-message .markdown-content pre { background-color: rgba(255,255,255,0.1); }
+      .user-message .markdown-content th, .user-message .markdown-content td { border-color: rgba(255,255,255,0.3); }
+      .user-message .markdown-content th { background-color: rgba(255,255,255,0.2); color: white; }
+      .user-message .markdown-content tr:nth-child(even) { background-color: rgba(255,255,255,0.1); }
     </style>
   <script type="importmap">
 {
@@ -48,7 +57,8 @@
     "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
     "uuid": "https://esm.sh/uuid@^13.0.0",
-    "react-markdown": "https://esm.sh/react-markdown@9?bundle"
+    "react-markdown": "https://esm.sh/react-markdown@9?bundle",
+    "remark-gfm": "https://esm.sh/remark-gfm@4?bundle"
   }
 }
 </script>
