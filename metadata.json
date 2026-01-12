@@ -1,0 +1,5 @@
+{
+  "name": "Dokdo Vibe Chat",
+  "description": "A chatbot that answers questions based on the content of the Vibe Dokdo website.",
+  "requestFramePermissions": []
+}
